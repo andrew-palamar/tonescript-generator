@@ -1,0 +1,18 @@
+[project]
+name = "tonescript-generator"
+version = "0.1.0"
+description = "Генератор WAV файлов из телефонных тонов в формате ToneScript"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.4.3",
+    "soundfile>=0.13.1",
+]
+
+[project.scripts]
+tonescript2wav = "tonescript_generator.cli:main"
+test-tones = "tonescript_generator.tester:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
